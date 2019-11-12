@@ -3,12 +3,12 @@ package Project_of_software_construction;
 import java.util.Random;
 
 public class My_math_problem {
-	static int[] Problem_array = new int[101]; // ¼ÇÂ¼Éú³ÉµÄ100¸öÊı
+	static int[] Problem_array = new int[101]; // è®°å½•ç”Ÿæˆçš„100ä¸ªæ•°
 	static int Problem_array_id = 1;
-	static char[] ch_array = new char[51];     //¼ÇÂ¼Ã¿¸öËãÊ½µÄ·ûºÅ
+	static char[] ch_array = new char[51];     //è®°å½•æ¯ä¸ªç®—å¼çš„ç¬¦å·
 	static int ch_array_id = 1;
 
-	//¼ì²éÊÇ·ñ´æÔÚÏàÍ¬µÄËãÊõÊ½
+	//æ£€æŸ¥æ˜¯å¦å­˜åœ¨ç›¸åŒçš„ç®—æœ¯å¼
 	public static boolean Check(int a,int b,char str,int ProblemEndId) {
 		for(int i = 1;i <= ProblemEndId;i += 2) {
 			if((a == Problem_array[i]) && (b == Problem_array[i+1]) && (str == ch_array[(i+1)/2])) {
@@ -18,19 +18,19 @@ public class My_math_problem {
 		return true;
 	}
 	
-	// Éú³É50µÀÌâÄ¿
+	// ç”Ÿæˆ50é“é¢˜ç›®
 	public static void RandomArithmetic() {
-		System.out.println("ÒÔÏÂÊÇËæ»úÉú³ÉµÄ50µÀ¼Ó¼õ·¨ËãÊõÌâ£º");
+		System.out.println("ä»¥ä¸‹æ˜¯éšæœºç”Ÿæˆçš„50é“åŠ å‡æ³•ç®—æœ¯é¢˜ï¼š");
 		Random random = new Random();
-		int problem_num = 1; // ÓÃÀ´¼ÆËã³öÌâÊıÄ¿
-		int x1, x2; // a,b´ú±íÁ½¸öÊıÖµ
-		int k = 0; // kÓÃÀ´±êÖ¾Ëæ»úÉú³ÉµÄ "+" ºÍ "-"£¬0´ú±í "-" £¬1´ú±í "+"
-		char ch; // ¼ÇÂ¼ÔËËã·û
+		int problem_num = 1; // ç”¨æ¥è®¡ç®—å‡ºé¢˜æ•°ç›®
+		int x1, x2; // a,bä»£è¡¨ä¸¤ä¸ªæ•°å€¼
+		int k = 0; // kç”¨æ¥æ ‡å¿—éšæœºç”Ÿæˆçš„ "+" å’Œ "-"ï¼Œ0ä»£è¡¨ "-" ï¼Œ1ä»£è¡¨ "+"
+		char ch; // è®°å½•è¿ç®—ç¬¦
 
-		// ³öÌâÊıÄ¿Ğ¡ÓÚ50,¼ÌĞø³öÌâ
+		// å‡ºé¢˜æ•°ç›®å°äº50,ç»§ç»­å‡ºé¢˜
 		while (problem_num <= 50) {
 
-			k = random.nextInt(2); // ÏÈÉú³ÉÔËËã·ûµÄËæ»úÊı
+			k = random.nextInt(2); // å…ˆç”Ÿæˆè¿ç®—ç¬¦çš„éšæœºæ•°
 			if (k == 1) {
 				ch = '+';
 			} else
@@ -38,12 +38,12 @@ public class My_math_problem {
 			
 			ch_array[ch_array_id++] = ch;
 			
-			// ¿ªÊ¼Éú³ÉËãÊõÊ½
+			// å¼€å§‹ç”Ÿæˆç®—æœ¯å¼
 			while (true) {
 				x1 = random.nextInt(101);
 				x2 = random.nextInt(101);
 				
-				//¼ì²éÉú³ÉµÄËãÊõÊ½ÊÇ·ñÒÑ¾­³öÏÖ¹ı
+				//æ£€æŸ¥ç”Ÿæˆçš„ç®—æœ¯å¼æ˜¯å¦å·²ç»å‡ºç°è¿‡
 				if(Check(x1, x2, ch, Problem_array_id-1)) {
 					
 				}
@@ -74,9 +74,9 @@ public class My_math_problem {
 		}
 }
 
-	//Êä³ö´ğ°¸
+	//è¾“å‡ºç­”æ¡ˆ
 	public static void printAnswer() {
-		System.out.println("Õâ50µÀËãÊõÌâµÄ´ğ°¸ÊÇ£º");
+		System.out.println("è¿™50é“ç®—æœ¯é¢˜çš„ç­”æ¡ˆæ˜¯ï¼š");
 		for(int i=1,j=1;i <= 50 ;i++) {
 			if(ch_array[i] == '+') {
 				System.out.print(i + ":" + (Problem_array[j++] + Problem_array[j++]) + "\t");
