@@ -7,23 +7,23 @@ public class Excise_Version_1_1 {
 //	Addition_Operation[] addOP_array = new Addition_Operation[MAX_Num];
 //	SubstractOperation[] subOP_array = new SubstractOperation[MAX_Num];
 	
-	/*¼ì²éÊÇ·ñ´æÔÚÏàÍ¬µÄËãÊõÊ½£¬´æÔÚÏàÍ¬µÄ·µ»Øtrue£¬Ã»ÓĞÏàÍ¬µÄ·µ»Øfalse*/
+	/*æ£€æŸ¥æ˜¯å¦å­˜åœ¨ç›¸åŒçš„ç®—æœ¯å¼ï¼Œå­˜åœ¨ç›¸åŒçš„è¿”å›trueï¼Œæ²¡æœ‰ç›¸åŒçš„è¿”å›false*/
 	private boolean checkIfSame(Binary_Operation_Version_1_1[] BO_array,int EndI,Binary_Operation_Version_1_1 BO_Now) {
 		for(int i = 0;i < EndI ;i ++) {
-			if(BO_array[i].toString().equals(BO_Now)) {
+			if(BO_array[i].toString().equals(BO_Now.toString())) {
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	/*²úÉúÒ»¶¨ÊıÁ¿numµÄÏ°Ìâ£¬ÒòÎªÃ»ÓĞÖ¸Ã÷²úÉúÊ²Ã´ÀàĞÍµÄÏ°Ìâ£¬ËùÒÔÕâÀïËæ»úÉú³ÉÏ°Ìâ£¬¼Ó¼õ·¨¶¼»áÉú³É*/
+	/*äº§ç”Ÿä¸€å®šæ•°é‡numçš„ä¹ é¢˜ï¼Œå› ä¸ºæ²¡æœ‰æŒ‡æ˜äº§ç”Ÿä»€ä¹ˆç±»å‹çš„ä¹ é¢˜ï¼Œæ‰€ä»¥è¿™é‡Œéšæœºç”Ÿæˆä¹ é¢˜ï¼ŒåŠ å‡æ³•éƒ½ä¼šç”Ÿæˆ*/
 	public Binary_Operation_Version_1_1[] getSomeNumProblems(int num) {
 		Binary_Operation_Version_1_1[] BO_random_array = new Binary_Operation_Version_1_1[num];
 		Random random = new Random();
 		
 		for(int i = 0;i < num;i ++) {
-			/*Ëæ»úÉú³É¼Ó¼õ·¨ËãÊ½£¬0´ú±í¼Ó·¨£¬1´ú±í¼õ·¨*/
+			/*éšæœºç”ŸæˆåŠ å‡æ³•ç®—å¼ï¼Œ0ä»£è¡¨åŠ æ³•ï¼Œ1ä»£è¡¨å‡æ³•*/
 			int flag = random.nextInt(2);
 			do {
 				if(flag == 0) {
@@ -35,7 +35,7 @@ public class Excise_Version_1_1 {
 		return BO_random_array;
 	}
 	
-	/*²úÉú¼Ó·¨ËãÊõÊ½*/
+	/*äº§ç”ŸåŠ æ³•ç®—æœ¯å¼*/
 	public Binary_Operation_Version_1_1[] getAddOperations(int num) {
 		Addition_Operation[] ADD_random_array = new Addition_Operation[num];
 		for(int i = 0;i < num ;i ++) {
@@ -46,7 +46,7 @@ public class Excise_Version_1_1 {
 		return ADD_random_array;
 	}
 	
-	/*²úÉú¼õ·¨ËãÊõÊ½*/
+	/*äº§ç”Ÿå‡æ³•ç®—æœ¯å¼*/
 	public Binary_Operation_Version_1_1[] getSubOperations(int num) {
 		SubstractOperation[] SUB_random_array = new SubstractOperation[num];
 		for(int i = 0;i < num ;i ++) {

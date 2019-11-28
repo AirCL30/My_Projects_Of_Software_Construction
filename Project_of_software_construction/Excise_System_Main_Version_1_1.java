@@ -10,14 +10,14 @@ public class Excise_System_Main_Version_1_1 {
 	private static Scanner cin = new Scanner(System.in);
 	
 	private static void display_header_1() {
-		System.out.println("*********************ÒÔÏÂÊÇÉú³ÉµÄËãÊõÊ½******************************");
+		System.out.println("*********************ä»¥ä¸‹æ˜¯ç”Ÿæˆçš„ç®—æœ¯å¼******************************");
 	}
 	private static void display_header_2() {
-		System.out.println("           --------------ÒÔÏÂÊÇËãÊõÊ½µÄ´ğ°¸--------------");
+		System.out.println("           --------------ä»¥ä¸‹æ˜¯ç®—æœ¯å¼çš„ç­”æ¡ˆ--------------");
 	}
 	private static void normal_display(Binary_Operation_Version_1_1[] BO_array,int EndI,int colNum) {
 		display_header_1();
-		/*Êä³öËæ»úÉú³ÉµÄËãÊõÊ½*/
+		/*è¾“å‡ºéšæœºç”Ÿæˆçš„ç®—æœ¯å¼*/
 		for(int i = 0;i < EndI;i ++) {
 			System.out.print((i+1) + ": " + BO_array[i].toString() + "\t");
 			if((i+1) % colNum == 0) {
@@ -27,7 +27,7 @@ public class Excise_System_Main_Version_1_1 {
 		System.out.println();
 		
 		display_header_2();
-		/*ÏÔÊ¾´ğ°¸*/
+		/*æ˜¾ç¤ºç­”æ¡ˆ*/
 		for(int i = 0;i < EndI;i ++) {
 			System.out.print((i+1) + ": " + BO_array[i].getResult() + "\t");
 			if((i+1) % colNum == 0) {
@@ -37,57 +37,57 @@ public class Excise_System_Main_Version_1_1 {
 		System.out.println();
 	}
 	
-	/*Õı³£µÄ¸ñÊ½»¯ÏÔÊ¾£¬Ò»ĞĞÏÔÊ¾5ÁĞ*/
+	/*æ­£å¸¸çš„æ ¼å¼åŒ–æ˜¾ç¤ºï¼Œä¸€è¡Œæ˜¾ç¤º5åˆ—*/
 	public static void format_display(Binary_Operation_Version_1_1[] BO_array,int EndI) {
 		normal_display(BO_array, EndI, 5);
 	}
 	
-	/*¸ù¾İÓÃ»§ĞèÇó£¬¸ü¸ÄÃ¿ĞĞµÄÁĞÊı*/
+	/*æ ¹æ®ç”¨æˆ·éœ€æ±‚ï¼Œæ›´æ”¹æ¯è¡Œçš„åˆ—æ•°*/
 	public static void format_display(Binary_Operation_Version_1_1[] BO_array,int EndI,int colNum) {
 		normal_display(BO_array, EndI, colNum);
 	}
 	
-	/*ÓÃ»§³öÌâ½çÃæ*/
+	/*ç”¨æˆ·å‡ºé¢˜ç•Œé¢*/
 	public static void interface_of_problems(int flag) {
-		System.out.println("ÇëÊäÈëÄúĞèÒªµÄÌâÄ¿Êı£º");
+		System.out.println("è¯·è¾“å…¥æ‚¨éœ€è¦çš„é¢˜ç›®æ•°ï¼š");
 		problem_Num = cin.nextInt();
 		
 		if(problem_Num <= 0) {
-			System.out.println("ÊäÈëÓĞÎó£¡Çë²»ÒªÊäÈë0 »òÕß ¸ºÊı£¡");
+			System.out.println("è¾“å…¥æœ‰è¯¯ï¼è¯·ä¸è¦è¾“å…¥0 æˆ–è€… è´Ÿæ•°ï¼");
 		}else {
 			Excise_Version_1_1 excises = new Excise_Version_1_1();
-			System.out.println("ÄúĞèÒª×ÔĞĞÉè¶¨ËãÊõÊ½ÏÔÊ¾¸ñÊ½Âğ£¿Èç¹ûÄú²»ĞèÒª£¬½«»áÎªÄúÔÚÒ»ĞĞÄÚÏÔÊ¾5ÁĞ£¨Y/N£©");
+			System.out.println("æ‚¨éœ€è¦è‡ªè¡Œè®¾å®šç®—æœ¯å¼æ˜¾ç¤ºæ ¼å¼å—ï¼Ÿå¦‚æœæ‚¨ä¸éœ€è¦ï¼Œå°†ä¼šä¸ºæ‚¨åœ¨ä¸€è¡Œå†…æ˜¾ç¤º5åˆ—ï¼ˆYy/Nnï¼‰");
 			ch = cin.next().charAt(0);
 			if(ch == 'Y' || ch == 'y') {
-				System.out.println("ÄúĞèÒªÔÚÒ»ĞĞÄÚÏÔÊ¾¼¸ÁĞ£¿");
+				System.out.println("æ‚¨éœ€è¦åœ¨ä¸€è¡Œå†…æ˜¾ç¤ºå‡ åˆ—ï¼Ÿ");
 				ColNum = cin.nextInt();
-				//flag == 1£¬»ñÈ¡¼Ó·¨ËãÊõÊ½£¬²¢ÏÔÊ¾Ã¿ĞĞColNumÁĞ
+				//flag == 1ï¼Œè·å–åŠ æ³•ç®—æœ¯å¼ï¼Œå¹¶æ˜¾ç¤ºæ¯è¡ŒColNumåˆ—
 				if(flag == 1) {
 					format_display(excises.getAddOperations(problem_Num), problem_Num,ColNum);
 				}
-				//flag == 2£¬»ñÈ¡¼õ·¨ËãÊõÊ½£¬²¢ÏÔÊ¾Ã¿ĞĞColNumÁĞ
+				//flag == 2ï¼Œè·å–å‡æ³•ç®—æœ¯å¼ï¼Œå¹¶æ˜¾ç¤ºæ¯è¡ŒColNumåˆ—
 				else if(flag == 2) {
 					format_display(excises.getSubOperations(problem_Num), problem_Num,ColNum);
 				}
-				//flag == 3£¬»ñÈ¡¼Ó¼õ·¨»ìºÏËãÊõÊ½£¬²¢ÏÔÊ¾Ã¿ĞĞColNumÁĞ
+				//flag == 3ï¼Œè·å–åŠ å‡æ³•æ··åˆç®—æœ¯å¼ï¼Œå¹¶æ˜¾ç¤ºæ¯è¡ŒColNumåˆ—
 				else {
 					format_display(excises.getSomeNumProblems(problem_Num), problem_Num,ColNum);
 				}
 			}else if(ch == 'N' || ch == 'n'){
-				//flag == 1£¬»ñÈ¡¼Ó·¨ËãÊõÊ½£¬²¢ÏÔÊ¾Ã¿ĞĞ5ÁĞ
+				//flag == 1ï¼Œè·å–åŠ æ³•ç®—æœ¯å¼ï¼Œå¹¶æ˜¾ç¤ºæ¯è¡Œ5åˆ—
 				if(flag == 1) {
 					format_display(excises.getAddOperations(problem_Num), problem_Num);
 				}
-				//flag == 2£¬»ñÈ¡¼õ·¨ËãÊõÊ½£¬²¢ÏÔÊ¾Ã¿ĞĞ5ÁĞ
+				//flag == 2ï¼Œè·å–å‡æ³•ç®—æœ¯å¼ï¼Œå¹¶æ˜¾ç¤ºæ¯è¡Œ5åˆ—
 				else if(flag == 2) {
 					format_display(excises.getSubOperations(problem_Num), problem_Num);
 				}
-				//flag == 3£¬»ñÈ¡¼Ó¼õ·¨»ìºÏËãÊõÊ½£¬²¢ÏÔÊ¾Ã¿ĞĞ5ÁĞ
+				//flag == 3ï¼Œè·å–åŠ å‡æ³•æ··åˆç®—æœ¯å¼ï¼Œå¹¶æ˜¾ç¤ºæ¯è¡Œ5åˆ—
 				else {
 					format_display(excises.getSomeNumProblems(problem_Num), problem_Num);
 				}
 			}else {
-				System.out.println("ÊäÈë¸ñÊ½ÓĞÎó£¡ÇëÖØĞÂÊäÈë£¡");
+				System.out.println("è¾“å…¥æ ¼å¼æœ‰è¯¯ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 			}
 	
 		}
@@ -100,7 +100,7 @@ public class Excise_System_Main_Version_1_1 {
 //		
 //		SubstractOperation subOp = new SubstractOperation();
 //		System.out.println(subOp + " " + subOp.getResult());
-		System.out.println("ÇëÑ¡ÔñĞèÒªµÄËãÊõÊ½ÀàĞÍ\n1--¼Ó·¨ËãÊõÊ½\n2--¼õ·¨ËãÊ½Ê½\n3--¼Ó¼õ·¨»ìºÏËãÊõÊ½\nÇëÊäÈë£º");
+		System.out.println("è¯·é€‰æ‹©éœ€è¦çš„ç®—æœ¯å¼ç±»å‹\n1--åŠ æ³•ç®—æœ¯å¼\n2--å‡æ³•ç®—å¼å¼\n3--åŠ å‡æ³•æ··åˆç®—æœ¯å¼\nè¯·è¾“å…¥ï¼š");
 		problem_Kind = cin.nextInt();
 		if(problem_Kind == 1) {
 			interface_of_problems(1);
@@ -109,7 +109,7 @@ public class Excise_System_Main_Version_1_1 {
 		}else if(problem_Kind == 3) {
 			interface_of_problems(3);
 		}else {
-			System.out.println("ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë!");
+			System.out.println("è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!");
 		}
 	}
 }

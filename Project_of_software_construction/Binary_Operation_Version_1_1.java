@@ -8,7 +8,7 @@ public abstract class Binary_Operation_Version_1_1 {
 	private char Operator;
 	private int Result;
 	
-	/*ËãÊ½ÀàÖĞÊôĞÔLeft_num¡¢Right_num¡¢Operator¡¢ResultµÄget·½·¨*/
+	/*ç®—å¼ç±»ä¸­å±æ€§Left_numã€Right_numã€Operatorã€Resultçš„getæ–¹æ³•*/
 	public int getLeft_num() {
 		return this.Left_Num;
 	}
@@ -22,23 +22,23 @@ public abstract class Binary_Operation_Version_1_1 {
 		return this.Result;
 	}
 	
-	/*¼ÆËãÔËËãÊ½µÄÖµ*/
+	/*è®¡ç®—è¿ç®—å¼çš„å€¼*/
 	public abstract int calculate(int left_num,int right_num);
-	/*ÅĞ¶ÏÔËËãÊ½µÄÖµÊÇ·ñºÏ·¨£¬·µ»ØtrueºÏ·¨£¬·µ»Øfalse²»ºÏ·¨*/
+	/*åˆ¤æ–­è¿ç®—å¼çš„å€¼æ˜¯å¦åˆæ³•ï¼Œè¿”å›trueåˆæ³•ï¼Œè¿”å›falseä¸åˆæ³•*/
 	public abstract boolean checkcalculate(int Calculate_Num);
 	
-	/*¹¹½¨ËãÊõÊ½*/
+	/*æ„å»ºç®—æœ¯å¼*/
 	public void Construct_Operation(char ch) {
 		Random random = new Random();
-		/*Éú³É×ó²Ù×÷Êı*/
+		/*ç”Ÿæˆå·¦æ“ä½œæ•°*/
 		this.Left_Num = random.nextInt(101);
 		int RS;
-		/*Éú³ÉÓÒ²Ù×÷Êı£º²»Í£µÄÉú³ÉÊıÖµ£¬Ö±µ½Âú×ãÌõ¼şµÄÄÇ¸öÎªÖ¹*/
+		/*ç”Ÿæˆå³æ“ä½œæ•°ï¼šä¸åœçš„ç”Ÿæˆæ•°å€¼ï¼Œç›´åˆ°æ»¡è¶³æ¡ä»¶çš„é‚£ä¸ªä¸ºæ­¢*/
 		do {
 			this.Right_Num = random.nextInt(101);
 			RS = calculate(this.Left_Num, this.Right_Num);
 		}while(!checkcalculate(RS));
-		/*¼ÇÂ¼½á¹ûResultºÍ²Ù×÷·ûch*/
+		/*è®°å½•ç»“æœResultå’Œæ“ä½œç¬¦ch*/
 		this.Result = RS;
 		this.Operator = ch;
 	}

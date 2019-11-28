@@ -2,20 +2,20 @@ package software_construction_OOP_version_1_1;
 
 public class SubstractOperation extends Binary_Operation_Version_1_1 {
 
-	/*¼õ·¨ËãÊõÊ½µÄ¹¹Ôì·½·¨£¬µ±new¼õ·¨ËãÊõÊ½¶ÔÏóÊ±£¬×Ô¶¯µ÷ÓÃ¼Ì³Ğ³éÏóÀàµÄConstruction_Opreation·½·¨*/
+	/*å‡æ³•ç®—æœ¯å¼çš„æ„é€ æ–¹æ³•ï¼Œå½“newå‡æ³•ç®—æœ¯å¼å¯¹è±¡æ—¶ï¼Œè‡ªåŠ¨è°ƒç”¨ç»§æ‰¿æŠ½è±¡ç±»çš„Construction_Opreationæ–¹æ³•*/
 	public SubstractOperation() {
 		// TODO Auto-generated constructor stub
 		this.Construct_Operation('-');
 	}
 	
-	/*ÖØĞ´¼ÆËã½á¹û·½·¨£¬·µ»ØÏà¼õÖµ*/
+	/*é‡å†™è®¡ç®—ç»“æœæ–¹æ³•ï¼Œè¿”å›ç›¸å‡å€¼*/
 	@Override
 	public int calculate(int left_num, int right_num) {
 		// TODO Auto-generated method stub
 		return left_num - right_num;
 	}
 
-	/*¼ì²é¼ÆËã½á¹ûÊÇ·ñºÏ·¨£¬ºÏ·¨Ôò·µ»Øtrue£¬²»ºÏ·¨·µ»Øfalse*/
+	/*æ£€æŸ¥è®¡ç®—ç»“æœæ˜¯å¦åˆæ³•ï¼Œåˆæ³•åˆ™è¿”å›trueï¼Œä¸åˆæ³•è¿”å›false*/
 	@Override
 	public boolean checkcalculate(int Calculate_Num) {
 		// TODO Auto-generated method stub
@@ -25,7 +25,7 @@ public class SubstractOperation extends Binary_Operation_Version_1_1 {
 		else return true;
 	}
 	
-	/*ÖØĞ´toString()£¬·µ»ØÉú³ÉµÄËãÊõÊ½*/
+	/*é‡å†™toString()ï¼Œè¿”å›ç”Ÿæˆçš„ç®—æœ¯å¼*/
 	@Override
 	public String toString() {
 		return (this.getLeft_num() + " " + this.getOperator() + " " + this.getRight_num() + " =");
