@@ -1,7 +1,5 @@
 package software_construction_OOP_version_1_1;
 
-import java.util.*;
-
 public abstract class Binary_Operation_Version_1_1 {
 	private int Left_Num;
 	private int Right_Num;
@@ -29,13 +27,13 @@ public abstract class Binary_Operation_Version_1_1 {
 	
 	/*构建算术式*/
 	public void Construct_Operation(char ch) {
-		Random random = new Random();
+		createRandomNum create_random_num = new createRandomNum();
 		/*生成左操作数*/
-		this.Left_Num = random.nextInt(101);
+		this.Left_Num = create_random_num.getRandomNum();
 		int RS;
 		/*生成右操作数：不停的生成数值，直到满足条件的那个为止*/
 		do {
-			this.Right_Num = random.nextInt(101);
+			this.Right_Num = create_random_num.getRandomNum();
 			RS = calculate(this.Left_Num, this.Right_Num);
 		}while(!checkcalculate(RS));
 		/*记录结果Result和操作符ch*/
