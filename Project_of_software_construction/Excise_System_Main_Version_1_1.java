@@ -20,8 +20,13 @@ public class Excise_System_Main_Version_1_1 {
 	
 	/*输入上下限*/
 	private void inputUpDownLine() {
-		System.out.println("请输入：\n       上限：");
-		this.upLine = cin.nextInt();
+		do {
+			System.out.println("请输入：\n       上限：");
+			this.upLine = cin.nextInt();
+			if(this.upLine < 0) {
+				System.out.println("上限不可以为负数哦！请重新输入一遍吧！");
+			}else break;
+		}while(true);
 		do {
 			System.out.println("       下限：");
 			this.downLine = cin.nextInt();
